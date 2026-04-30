@@ -1,0 +1,19 @@
+/* Estilos Globales */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Asegura que html y body ocupen toda la altura de la ventana */
+  font-family: 'Roboto', sans-serif;
+  /* Fuente de ejemplo, puedes elegir la que prefieras */
+  box-sizing: border-box;
+  /* Fundamental para un dimensionamiento consistente de los elementos */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* Hereda el box-sizing para todos los elementos */
+}

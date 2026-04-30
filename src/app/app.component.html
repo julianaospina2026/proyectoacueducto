@@ -1,0 +1,24 @@
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2>💧 Acueducto</h2>
+
+        <nav>
+            <a routerLink="/inicio" routerLinkActive="active">🏠 Inicio</a>
+            <a routerLink="/clientes" routerLinkActive="active">👥 Clientes</a>
+            <a routerLink="/usuarios" routerLinkActive="active">👤 Usuarios</a>
+        </nav>
+    </aside>
+
+    <div class="main-content">
+        <header class="topbar">
+            <h1>Sistema de Acueducto</h1>
+            <span>Administrador</span>
+        </header>
+
+        <main class="page-content">
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+
+</div>

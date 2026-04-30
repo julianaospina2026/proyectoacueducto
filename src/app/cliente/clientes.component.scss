@@ -1,0 +1,162 @@
+:host {
+    display: block;
+}
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(180deg, rgba(2, 17, 68, 0.06), rgba(255, 255, 255, 0.9));
+    border-radius: 16px;
+}
+
+h2 {
+    color: #062a5c;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+}
+
+.subtitle {
+    color: #476b8a;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.alerts {
+    min-height: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.sucess {
+    color: #165c28;
+    background: rgba(22, 92, 40, 0.1);
+    padding: 0.85rem 1rem;
+    border-left: 4px solid #165c28;
+    border-radius: 10px;
+}
+
+.error {
+    color: #841818;
+    background: rgba(216, 48, 48, 0.1);
+    padding: 0.85rem 1rem;
+    border-left: 4px solid #c62828;
+    border-radius: 10px;
+}
+
+.search-box,
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 220px;
+    border-radius: 10px;
+}
+
+.form-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(6, 42, 92, 0.08);
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+input,
+select {
+    width: 100%;
+    border: 1px solid #b0c7da;
+    border-radius: 12px;
+    padding: 0.85rem 1rem;
+    background: #f8fbff;
+    color: #113a5b;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #1565c0;
+    box-shadow: 0 0 0 6px rgba(21, 101, 192, 0.12);
+}
+
+button {
+    border: none;
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: #fff;
+    border-radius: 12px;
+    padding: 0.9rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 24px rgba(13, 71, 161, 0.16);
+}
+
+button.secondary {
+    background: #5f7c95;
+}
+
+button.danger {
+    background: linear-gradient(135deg, #ab1f1f, #d32f2f);
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(6, 42, 92, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+}
+
+th {
+    background: linear-gradient(135deg, #0d47a1, #1565c0);
+    color: #fff;
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+td {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #e1e9f2;
+    color: #16374f;
+}
+
+tbody tr:hover {
+    background: rgba(21, 101, 192, 0.05);
+}
+
+.actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.empty {
+    text-align: center;
+    color: #5f7c95;
+    padding: 2rem 0;
+}
+.loading {
+    color: #5f7c95;
+}

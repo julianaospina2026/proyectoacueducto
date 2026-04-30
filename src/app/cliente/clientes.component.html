@@ -1,0 +1,120 @@
+<section class="page">
+    <h2>Cliente</h2>
+    <p class="subtitle">CRUD al backend con SpringBoot</p>
+
+    <div class="alerts">
+        @if (mensaje) {
+            <p class="sucess">{{ mensaje }}</p>
+        }
+        @if (error) {
+            <p class="error">{{ error }}</p>
+        }
+    </div>
+
+    <div class="search-box">
+        <input
+            type="text"
+            [formControl]="filtroDocumento"
+            placeholder="Buscar por documento"
+        />
+        <button type="button" (click)="buscarPorDocumento()">Buscar</button>
+        <button type="button" class="secondary" (click)="limpiarBusqueda()">Limpiar</button>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="guardar()" class="form-grid">
+        <label for="codigoCliente">
+            Código Cliente:
+            <input id="codigoCliente" type="text" formControlName="codigoCliente" placeholder="códigoCliente" />
+        </label>
+        <label for="documento">
+            Documento:
+            <input id="documento" type="text" formControlName="documento" placeholder="documento" />
+        </label>
+        <label for="nombres">
+            Nombres:
+            <input id="nombres" type="text" formControlName="nombres" placeholder="nombres" />
+        </label>
+        <label for="apellidos">
+            Apellidos:
+            <input id="apellidos" type="text" formControlName="apellidos" placeholder="apellidos" />
+        </label>
+        <label for="direccion">
+            Dirección:
+            <input id="direccion" type="text" formControlName="direccion" placeholder="direccion" />
+        </label>
+        <label for="telefono">
+            Teléfono:
+            <input id="telefono" type="text" formControlName="telefono" placeholder="telefono" />
+        </label>
+        <label for="email">
+            Email:
+            <input id="email" type="email" formControlName="email" placeholder="email" />
+        </label>
+        <label for="estrato">
+            Estrato:
+            <input id="estrato" type="number" formControlName="estrato" placeholder="estrato" min="1" max="6" />
+        </label>
+        <label for="estado">
+            Estado:
+            <select id="estado" formControlName="estado">
+                <option value="ACTIVO">Activo</option>
+                <option value="INACTIVO">Inactivo</option>
+            </select>
+        </label>
+
+        
+        <div class="form-actions">
+            <button type="submit" [disabled]="form.invalid">
+                {{ editandoId ? 'Actualizar' : 'Guardar' }}
+            </button>
+            @if (editandoId !== null) {
+                <button type="button" class="secondary" (click)="cancelarEdicion()">Cancelar</button>
+            }
+        </div>
+    </form>
+
+    <hr />
+
+    @if (cargando) {
+        <p class="loading">Cargando clientes...</p>
+    } @else {
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Documento</th>
+                    <th>Nombres</th>
+                    <th>Apellidos</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of clientes; track item.id) {
+                    <tr>
+                        <td>{{ item.codigoCliente }}</td>
+                        <td>{{ item.documento }}</td>
+                        <td>{{ item.nombres }}</td>
+                        <td>{{ item.apellidos }}</td>
+                        <td>{{ item.estado }}</td>
+                        <td>
+                            <button class="btn-edit" (click)="iniciarEdicion(item)">Editar</button>
+                            <button class="btn-delete" (click)="eliminar(item.id)">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <div class="routes ts"></div>
+    <div class="config ts"></div>
+    <div class="component html"></div>
+    <div class="component scss"></div>
+    <div class="component ts"></div>
+    <div class="component spec ts"></div>
+
+
+
+
+</section>
