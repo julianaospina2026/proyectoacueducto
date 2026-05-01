@@ -1,104 +1,41 @@
 <!-- NAVBAR -->
-<header class="navbar" [class.scrolled]="scrolled">
-<div class="container">
-    <img src="assets/agua.png" class="logo">
-
+<header class="navbar">
+    <h2>Acueducto Primavera</h2>
     <nav>
-        <a href="#">Inicio</a>
-        <a href="#">La Asociación</a>
-        <a href="#">Servicios</a>
-        <a href="#">PQRS</a>
-        <a href="#">Contacto</a>
-    </nav>
-</div>
+    <a routerLink="/">Inicio</a>
+    <a routerLink="/servicios">Servicios</a>
+    <a routerLink="/noticias">Noticias</a>
+    <a routerLink="/contacto">Contacto</a>
+</nav>
 </header>
 
 <!-- HERO -->
-<section class="hero fade-in">
-<div class="overlay">
-    <h1>Tu fuente confiable de agua potable</h1>
-    <p>Asociación de usuarios del acueducto rural</p>
+<section class="hero">
+    <div class="hero-text">
+    <div class="hero-content">
+        <h1>El agua de vida</h1>
+        <p>Gestión eficiente del recurso hídrico</p>
+        <button>Ver más</button>
+    </div>
 </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services container fade-in">
-<div class="card">
-    <h3>Consulta tu factura</h3>
-</div>
-
-<div class="card fade-in">
-    <h3>Formulario PQRS</h3>
-</div>
-
-<div class="card fade-in">
-    <h3>Estatutos</h3>
-</div>
-</section>
-
-<!-- ABOUT -->
-<section class="about fade-in">
-<h2>La Asociación</h2>
-<p>Brindamos agua potable de calidad a la comunidad</p>
-</section>
-
-<!-- STATS -->
-<section class="stats fade-in">
-  <div *ngFor="let s of stats">
-    <h2>{{ s.value|number:'1.0-0' }}</h2>
-    <p>{{ s.label }}</p>
-</div>
-</section>
-
-<!-- NEWS -->
-<section class="news2-section">
-
-<div class="news2-container">
-
-    <h2 class="news2-title">Noticias</h2>
-
-    <div class="news2-grid">
-        
-        <div class="news2-card">
-        <img src="assets/img/noticia1.jpg">
-        <div class="news2-content">
-            <div class="news2-date">13 de octubre de 2023</div>
-            <h3>Protegiendo las quebradas: la clave para un ecosistema saludable</h3>
-            <button class="news2-btn">Leer más</button>
+</section><!-- SERVICIOS -->
+<section class="section">
+    <h2>Servicios</h2>
+    <div class="grid">
+        <div class="card" *ngFor="let item of servicios"> <img [src]="item.img" />
+            <h3>{{ item.titulo }}</h3>
+            <p>{{ item.descripcion }}</p>
         </div>
     </div>
-    
-    <div class="news2-card">
-        <img src="assets/img/noticia2.jpg">
-        <div class="news2-content">
-            <div class="news2-date">13 de octubre de 2023</div>
-            <h3>Conoce el subsidio para los usuarios estratos 1,2 y 3</h3>
-            <button class="news2-btn">Leer más</button>
+</section><!-- NOTICIAS -->
+<section class="section alt">
+    <h2>Noticias</h2>
+    <div class="grid">
+        <div class="card" *ngFor="let n of noticias"> <img [src]="n.img" />
+            <h3>{{ n.titulo }}</h3>
         </div>
     </div>
-    
-    <div class="news2-card">
-        <img src="assets/wikiimages-earth-11008_1920.jpg">
-        <div class="news2-content">
-            <div class="news2-date">12 de septiembre de 2023</div>
-            <h3>Día Internacional de la Preservación de la Capa de Ozono</h3>
-            <button class="news2-btn">Leer más</button>
-        </div>
-    </div>
-
-    </div>
-</div>
-
-</section>
-<!-- INFO -->
-<section class="water-banner">
-<div class="content">
-    <h1>¿Estás haciendo uso eficiente del agua?</h1>
-    <button>Descúbrelo</button>
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer fade-in">
-<p>© 2026 Acueducto Rural</p>
+</section><!-- FOOTER -->
+<footer>
+    <p>© 2026 Acueducto Primavera</p>
 </footer>
