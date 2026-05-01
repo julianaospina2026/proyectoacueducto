@@ -1,9 +1,9 @@
 {
+    "outputDirectory": "dist/prueba-front",
     "rewrites": [
-    {
-        "source": "/(.*)",
-        "destination": "/index.html"
-    }
-]
+        {
+            "source": "/(.*)",
+            "destination": "/"
+        }
+    ]
 }
-
