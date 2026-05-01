@@ -1,5 +1,5 @@
 {
-    "outputDirectory": "dist/prueba-front",
+    "outputDirectory": "dist/prueba-front/browser",
     "rewrites": [
         {
             "source": "/(.*)",
