@@ -1,11 +1,10 @@
 {
-    "framework": "angular",
     "buildCommand": "npm run build",
     "outputDirectory": "dist/prueba-front",
-    "routes": [
+    "rewrites": [
     {
-        "src": "/(.*)",
-        "dest": "/index.html"
+        "source": "/(.*)",
+        "destination": "/index.html"
     }
 ]
 }
