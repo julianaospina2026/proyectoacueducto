@@ -30,13 +30,13 @@
             Documento:
             <input id="documento" type="text" formControlName="documento" placeholder="documento" />
         </label>
-        <label for="nombres">
-            Nombres:
-            <input id="nombres" type="text" formControlName="nombres" placeholder="nombres" />
+        <label for="nombre">
+            Nombre:
+            <input id="nombre" type="text" formControlName="nombre" placeholder="nombre" />
         </label>
-        <label for="apellidos">
-            Apellidos:
-            <input id="apellidos" type="text" formControlName="apellidos" placeholder="apellidos" />
+        <label for="apellido">
+            Apellido:
+            <input id="apellido" type="text" formControlName="apellido" placeholder="apellido" />
         </label>
         <label for="direccion">
             Dirección:
@@ -83,8 +83,8 @@
                 <tr>
                     <th>Código</th>
                     <th>Documento</th>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
                     <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
@@ -94,8 +94,8 @@
                     <tr>
                         <td>{{ item.codigoCliente }}</td>
                         <td>{{ item.documento }}</td>
-                        <td>{{ item.nombres }}</td>
-                        <td>{{ item.apellidos }}</td>
+                        <td>{{ item.nombre }}</td>
+                        <td>{{ item.apellido }}</td>
                         <td>{{ item.estado }}</td>
                         <td>
                             <button class="btn-edit" (click)="iniciarEdicion(item)">Editar</button>
@@ -106,15 +106,4 @@
             </tbody>
         </table>
     }
-
-    <div class="routes ts"></div>
-    <div class="config ts"></div>
-    <div class="component html"></div>
-    <div class="component scss"></div>
-    <div class="component ts"></div>
-    <div class="component spec ts"></div>
-
-
-
-
 </section>

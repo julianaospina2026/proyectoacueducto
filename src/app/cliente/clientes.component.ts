@@ -15,8 +15,8 @@ import { HttpErrorResponse } from '@angular/common/http';
     selector: 'app-cliente',
     standalone: true,
     imports: [CommonModule, FormsModule, ReactiveFormsModule],
-    templateUrl: './cliente.component.html',
-    styleUrls: ['./cliente.component.scss']
+    templateUrl: './clientes.component.html',
+    styleUrls: ['./clientes.component.scss']
 })
 export class ClienteComponent implements OnInit {
 
